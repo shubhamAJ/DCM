@@ -38,6 +38,33 @@ class SingleStrategy extends React.Component{
         }, 2000);
     }
 
+    componentDidMount(){
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+    
+    handleScroll() {
+        console.log('scrolling => 2020');
+
+        let header = document.getElementById("sticky-element-offset");
+        let elements1 = document.getElementById("sticky-element1");
+        let sticky = header.offsetTop;
+        let height = 0;
+
+        if (window.pageYOffset > sticky) {           
+            header.classList.add("sticky");
+            elements1.classList.add("sticky");
+            console.log()
+           height =  (header.offsetHeight);
+        } else {
+            header.classList.remove("sticky");
+            elements1.classList.remove("sticky");
+        }
+    }
+
     render(){
         const {loaderHide} = this.state
 
