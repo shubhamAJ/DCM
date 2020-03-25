@@ -1,0 +1,104 @@
+.tab-navigation {
+    background-color: #ffffff;
+    box-shadow: inset 0 -1px 3px 0 rgba(220,222,224,0.65);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0 0 1px;
+
+    li {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        padding: 17px 0;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0 30px;
+            text-decoration: none !important;
+            border-right: 1px solid rgba(151, 151, 151, 0.48);
+
+            .tab-title {
+                color: #00344A;
+                font-family: "Nunito Sans";
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 18px;
+            }
+            .tab-subtitle{
+                opacity: 0.6;
+                color: #163B55;
+                font-family: "Nunito Sans";
+                font-size: 13px;
+                letter-spacing: 0;
+                line-height: 18px;
+            }
+            .tab-value{
+                span{
+                    &:first-child{
+                        color: #537FA0;
+                        font-family: "Nunito Sans";
+                        font-size: 13px;
+                        font-weight: 800;
+                        letter-spacing: 0;
+                        line-height: 18px;
+                    }
+                    &:nth-child(even){
+                        color: #537FA0;
+                        font-family: "Nunito Sans";
+                        font-size: 10px;
+                        letter-spacing: 0;
+                        line-height: 14px;
+                    }
+                    &:last-child{
+                        opacity: 0.5;
+                        color: #163B55;
+                        font-family: "Nunito Sans";
+                        font-size: 11px;
+                        letter-spacing: 0;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+        &.active {
+            border-radius: 1px 1px 0 0;
+            background-color: #00344A;
+            box-shadow: 0 -1px 6px 1px rgba(0,52,74,0.49);
+            padding: 0;
+
+            a {
+                .tab-title, .tab-subtitle{
+                    color: #ffffff;
+                }
+                .tab-value{
+                    span{
+                        &:first-child{
+                            color: #ffffff;
+                        }
+                        &:nth-child(even){
+                            color: #ffffff;
+                        }
+                        &:last-child{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.navigation-content{
+    background-color: #f5f5f5;
+    display: flex;
+    padding-top: 15px;
+    @media (max-width: 1199px){
+        display: block;
+    }
+}
