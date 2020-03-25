@@ -105,9 +105,9 @@ class Summary extends React.Component{
                 details: data.details,
                 analysis: data.analysis
             })
-        })
 
-        this.props.sumToggle(true)
+            this.props.sumToggle(true)
+        })        
     }
 
     render(){

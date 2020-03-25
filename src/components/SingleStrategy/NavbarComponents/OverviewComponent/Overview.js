@@ -49,7 +49,7 @@ class Overview extends React.Component{
             //     risk: data.risk
             // })
 
-            
+            this.props.navType(true)
         })
     }
     render(){

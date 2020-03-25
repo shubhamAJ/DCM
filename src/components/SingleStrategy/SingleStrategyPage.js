@@ -14,28 +14,30 @@ class SingleStrategy extends React.Component{
         this.toggleSummaryLoad = this.toggleSummaryLoad.bind(this);
     }
     toggleTypeLoad(load){
-        if(load){
+        if(!load){
             this.setState({
-                loaderHide: ''
-            })
-        } else{
-            this.setState({
+                typeLoad: false,
                 loaderHide: ''
             })
         }
-        
+        this.timeout = setTimeout(() => {
+            const {summaryLoad} = this.state
+            this.setState({
+                typeLoad: true,
+                loaderHide: (summaryLoad) ? 'hide' : ''
+            })
+        }, 2000);
     }
     toggleSummaryLoad(load){
-        this.setState({
-            loaderHide: ''
-        })
+        this.timeout = setTimeout(() => {
+            const {typeLoad} = this.state
+            this.setState({
+                summaryLoad: true,
+                loaderHide: (typeLoad) ? 'hide' : ''
+            })
+        }, 2000);
     }
-    componentDidMount(){
-        //window.addEventListener('scroll', this.handleScroll);
-    }
-    handleScroll(event){
-        //console.log(window.scrollY)
-    }
+
     render(){
         const {loaderHide} = this.state
 
