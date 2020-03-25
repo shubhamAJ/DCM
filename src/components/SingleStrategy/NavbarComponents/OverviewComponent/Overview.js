@@ -359,6 +359,155 @@ class Overview extends React.Component{
                         </div>
                     </div>
 
+                    <div className="navigation-overview-middle-graphs">
+                        <div className="navigation-overview-middle-title">
+                            <span>Monthy (21B) Returns During Market drawdown periods vs following months performance</span>
+                        </div>
+                        <div className="navigation-overview-middle-graph">
+                            <Graph 
+                                data={[
+                                    {
+                                        y: [0.1, 0.2, 0.3, 0.4, 0.6, 1.0, 0.4, 0.5, 0.6, 0.2, 0.5, 0.7, 0.6, 0.8, 1, 0.4, 0.6, 0.8],
+                                        x: ['Sept 2015','Sept 2015','Sept 2015',
+                                        'Jan 2016', 'Jan 2016','Jan 2016',
+                                        'Feb 2016', 'Feb 2016','Feb 2016',
+                                        'Apr 2018', 'Apr 2018','Apr 2018',
+                                        'Dec 2018', 'Dec 2018','Dec 2018'],
+                                        boxpoints: 'all',
+                                        jitter: 0.3,
+                                        pointpos: -1.8,
+                                        type: 'box',
+                                        name: 'Benchmark',
+                                        marker: {
+                                            color: 'rgb(35, 100, 204)'
+                                        }
+                                    },
+                                    {
+                                        y: [0.5, 0.6, 0.7, 0.3, 0.4, 0.6, 0.0, 0.2, 0.5, 0.7, 0.8, 0.9, 0.5, 0.6, 0.8, 0.7, 0.8, 0.9],
+                                        x: ['Sept 2015','Sept 2015','Sept 2015',
+                                        'Jan 2016', 'Jan 2016','Jan 2016',
+                                        'Feb 2016', 'Feb 2016','Feb 2016',
+                                        'Apr 2018', 'Apr 2018','Apr 2018',
+                                        'Dec 2018', 'Dec 2018','Dec 2018'],
+                                        boxpoints: 'all',
+                                        jitter: 0.3,
+                                        pointpos: -1.8,
+                                        type: 'box',
+                                        name: 'Strategy',
+                                        marker: {
+                                            color: 'rgb(219, 66, 90)'
+                                        }
+                                    }
+                                ]}
+                            
+                                layout={
+                                    { 
+                                        //autosize: true,
+                                        xaxis:{
+                                            side: 'top'
+                                        },
+                                        yaxis: {
+                                            zeroline: false,
+                                            title: {
+                                                text: '% Return',
+                                                font: {
+                                                    family: 'Nunito Sans',
+                                                    size: 14,
+                                                    color: '#7f7f7f'
+                                                }
+                                            }
+                                        },
+                                        legend:{
+                                            orientation: 'h',
+                                            y:-0.2, 
+                                            x:0  
+                                        },
+                                        margin: { t: 40, l: 40, r: 40, b: 40 },
+                                        boxmode: 'group'
+                                    }
+                                }
+                                useResizeHandler = { true }
+                                style = { {width: "100%", height: "100%"}}
+                                config= {{displayModeBar: false}}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="navigation-overview-middle-graphs">
+                        <div className="navigation-overview-middle-title">
+                            <span>Strategy performance during worst benchmark period</span>
+                        </div>
+                        <div className="navigation-overview-middle-graph">
+                            <Graph 
+                                data={[
+                                    {
+                                        y: [0.1, 0.2, 0.3, 0.4, 0.6, 1.0, 0.4, 0.5, 0.6, 0.2, 0.5, 0.7, 0.6, 0.8, 1, 0.4, 0.6, 0.8],
+                                        x: ['Dec 2018', 'Dec 2018','Dec 2018',
+                                        'Jan 2016', 'Jan 2016','Jan 2016',
+                                        'Jan 2016', 'Jan 2016','Jan 2016',
+                                        'Feb 2016', 'Feb 2016','Feb 2016',
+                                        'Sept 2015','Sept 2015','Sept 2015',
+                                        ],
+                                        boxpoints: 'all',
+                                        jitter: 0.3,
+                                        pointpos: -1.8,
+                                        type: 'box',
+                                        name: 'Strategy',
+                                        marker: {
+                                            color: 'rgb(35, 100, 204)'
+                                        }
+                                    },
+                                    {
+                                        y: [0.5, 0.6, 0.7, 0.3, 0.4, 0.6, 0.0, 0.2, 0.5, 0.7, 0.8, 0.9, 0.5, 0.6, 0.8, 0.7, 0.8, 0.9],
+                                        x: ['Dec 2018', 'Dec 2018','Dec 2018',
+                                        'Jan 2016', 'Jan 2016','Jan 2016',
+                                        'Jan 2016', 'Jan 2016','Jan 2016',
+                                        'Feb 2016', 'Feb 2016','Feb 2016',
+                                        'Sept 2015','Sept 2015','Sept 2015',
+                                        ],
+                                        boxpoints: 'all',
+                                        jitter: 0.3,
+                                        pointpos: -1.8,
+                                        type: 'box',
+                                        name: 'SPY',
+                                        marker: {
+                                            color: 'rgb(219, 66, 90)'
+                                        }
+                                    }
+                                ]}
+                            
+                                layout={
+                                    { 
+                                        //autosize: true,
+                                        xaxis:{
+                                            side: 'top'
+                                        },
+                                        yaxis: {
+                                            zeroline: false,
+                                            title: {
+                                                text: '% Return',
+                                                font: {
+                                                    family: 'Nunito Sans',
+                                                    size: 14,
+                                                    color: '#7f7f7f'
+                                                }
+                                            }
+                                        },
+                                        legend:{
+                                            orientation: 'h',
+                                            y:-0.2, 
+                                            x:0  
+                                        },
+                                        margin: { t: 40, l: 40, r: 40, b: 40 },
+                                        boxmode: 'group'
+                                    }
+                                }
+                                useResizeHandler = { true }
+                                style = { {width: "100%", height: "100%"}}
+                                config= {{displayModeBar: false}}
+                            />
+                        </div>
+                    </div>
 
                     <div className="navigation-overview-middle-graphs">
                         <div className="navigation-overview-middle-title">
