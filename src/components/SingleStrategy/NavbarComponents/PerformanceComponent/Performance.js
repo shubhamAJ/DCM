@@ -39,6 +39,7 @@ class Overview extends React.Component{
     }
 
     componentDidMount(){
+        this.props.navType(true)
     }
 
     render(){

@@ -11,6 +11,7 @@ class NavigationBar extends React.Component{
             loader: false,
             type: 'overview'
         }
+        this.toggleTypeLoadNav = this.toggleTypeLoadNav.bind(this);
     }
     
     handleClick(e){
@@ -18,6 +19,10 @@ class NavigationBar extends React.Component{
         this.setState({
             type: e.target.id
         })
+        this.props.navToggle(false)
+    }
+
+    toggleTypeLoadNav(){
         this.props.navToggle(true)
     }
     render(){
@@ -97,10 +102,10 @@ class NavigationBar extends React.Component{
                 </div>
                 <div className="navigation-content">
                     {type == 'overview' &&
-                        <Overview />
+                        <Overview navType={this.toggleTypeLoadNav}/>
                     }
                     {type == 'performance' &&
-                        <Performance />
+                        <Performance navType={this.toggleTypeLoadNav}/>
                     }
                 </div>
             </div>

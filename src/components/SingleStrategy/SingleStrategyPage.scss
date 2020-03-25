@@ -11,6 +11,8 @@
     bottom: 0;
     height: 100px;
     width: 100px;
+    z-index: 999;
+    background: #000;
     .lds-dual-ring {
         display: inline-block;
         width: 80px;
@@ -39,5 +41,5 @@
 }
 
 .hide{
-    display: none;
+    display: none !important;
 }
