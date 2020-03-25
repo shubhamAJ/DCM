@@ -118,60 +118,62 @@ class Summary extends React.Component{
         let alpha = analysis.alpha_value
         return(
             <div className="summary">
-                <div className="section-top">
-                    <div className="left">
-                        <div className="title">
-                            <span>{title}</span>
-                        </div>
-                        <div className="sum">
-                            <span>{summary}</span>
-                        </div>
-                        <div className="details">
-                            <div className="tags">
-                                {this.renderTags(tags)}
+                <div className="container">
+                    <div className="section-top">
+                        <div className="left">
+                            <div className="title">
+                                <span>{title}</span>
                             </div>
-                            <div className="details-elements">
-                                {this.renderDetails(details)}
+                            <div className="sum">
+                                <span>{summary}</span>
                             </div>
-                        </div>
-                    </div>
-                    <div className="right">
-                        <div>
-                            <div className="analysis">
-                                <div className="analysis-wrap">
-                                    <div className="analysis-wrap-left">
-                                        {this.renderAnalysisLTM(ltm)}
-                                    </div>
-                                    <div className="analysis-wrap-right">
-                                        {this.renderAnalysisALPHA(alpha)}
-                                    </div>
+                            <div className="details">
+                                <div className="tags">
+                                    {this.renderTags(tags)}
                                 </div>
-                                <div className="analysis-vs">
-                                    <span className="title"><span className="title-vs">v/s: </span><span className="title-content"><b>IWF</b> Russell 1000 Growth ETF</span></span>
-                                    <span className="link"></span>
+                                <div className="details-elements">
+                                    {this.renderDetails(details)}
                                 </div>
                             </div>
-                            <div className="last-updated">
-                                <span className="label">Last updated:</span>
-                                <span className="time">2mins ago</span>
+                        </div>
+                        <div className="right">
+                            <div>
+                                <div className="analysis">
+                                    <div className="analysis-wrap">
+                                        <div className="analysis-wrap-left">
+                                            {this.renderAnalysisLTM(ltm)}
+                                        </div>
+                                        <div className="analysis-wrap-right">
+                                            {this.renderAnalysisALPHA(alpha)}
+                                        </div>
+                                    </div>
+                                    <div className="analysis-vs">
+                                        <span className="title"><span className="title-vs">v/s: </span><span className="title-content"><b>IWF</b> Russell 1000 Growth ETF</span></span>
+                                        <span className="link"></span>
+                                    </div>
+                                </div>
+                                <div className="last-updated">
+                                    <span className="label">Last updated:</span>
+                                    <span className="time">2mins ago</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="section-bottom">
-                    <div className="left">
-                        <div className="buttons">
-                            <button className="watchlist">ADD TO WATCHLIST</button>
-                            <button className="invest">INVEST NOW</button>
+                    <div className="section-bottom">
+                        <div className="left">
+                            <div className="buttons">
+                                <button className="watchlist">ADD TO WATCHLIST</button>
+                                <button className="invest">INVEST NOW</button>
+                            </div>
                         </div>
-                    </div>
-                    <div className="right">
-                        <div className="buttons">
-                            <button className="buttons-factsheet">Fact Sheet</button>
-                            <button className="buttons-share">Share</button>
+                        <div className="right">
+                            <div className="buttons">
+                                <button className="buttons-factsheet">Fact Sheet</button>
+                                <button className="buttons-share">Share</button>
+                            </div>
                         </div>
+                        
                     </div>
-                    
                 </div>
             </div>
         )
